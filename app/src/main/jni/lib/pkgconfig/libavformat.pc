@@ -1,0 +1,14 @@
+prefix=/home/shane/android/ffmpeg-2.8.10/build/ffmpeg/output
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 56.40.101
+Requires: 
+Requires.private: libavcodec >= 56.60.100, libavutil >= 54.31.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lx264 -ldl -lm -pthread
+Cflags: -I${includedir}
